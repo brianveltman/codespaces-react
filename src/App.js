@@ -18,7 +18,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn ReactLearn ReactLearn ReactLearn ReactLearn ReactLearn ReactLearn React
+            Learn React!!!!!
           </a>
         </p>
       </header>
