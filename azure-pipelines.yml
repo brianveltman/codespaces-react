@@ -19,3 +19,8 @@ steps:
     yarn install
     yarn run build
   displayName: 'yarn install and build'
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    publishRegistry: 'useFeed'
+    publishFeed: '9eabae5b-bca3-457f-b7d5-7eeee4080758/d3b59d18-14e1-4532-afa7-256a65ff1a19'
