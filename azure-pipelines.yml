@@ -15,10 +15,16 @@ steps:
     versionSpec: '16.19.0'
   displayName: 'Install Node.js'
 
-- script: |
-    yarn install
-    yarn run build
-  displayName: 'yarn install and build'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    customRegistry: 'useFeed'
+    customFeed: '9eabae5b-bca3-457f-b7d5-7eeee4080758/d3b59d18-14e1-4532-afa7-256a65ff1a19'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run build'
 - task: Npm@1
   inputs:
     command: 'publish'
