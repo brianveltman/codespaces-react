@@ -1,5 +1,4 @@
 import './App.css';
-import Button from './Button';
 import logo from './logo.svg';
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button />
         </a>
       </header>
     </div>
