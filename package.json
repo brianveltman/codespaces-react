@@ -1,6 +1,6 @@
 {
   "name": "ui-blocks-newapp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/Button.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
