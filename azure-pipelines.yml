@@ -10,6 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'custom'
+    custom: 'install'
+    arguments: 'GitVersion.Tool'
+
+- script: echo $(GitVersion.SemVer)
+
 - task: NodeTool@0
   inputs:
     versionSpec: '16.19.0'
