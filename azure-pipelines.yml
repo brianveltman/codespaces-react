@@ -10,11 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'custom'
-    custom: 'tool install'
-    arguments: 'GitVersion.Tool'
+- script: dotnet tool install --global GitVersion.Tool
 
 - script: echo $(GitVersion.SemVer)
 
