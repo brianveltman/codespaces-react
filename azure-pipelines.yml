@@ -41,7 +41,7 @@ steps:
     configFilePath: 'GitVersion.yml'
 
 - script: |
-    echo 'Replacing version in package.json'
+    echo 'Replacing version in package.json with actual semver'
     sed -i 's/0.0.0-placeholder/$(FullSemVer)/g' $(Build.SourcesDirectory)/package.json
 
 - script: cat $(Build.SourcesDirectory)/package.json
