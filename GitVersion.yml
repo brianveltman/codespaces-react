@@ -1,5 +1,4 @@
 mode: ContinuousDelivery
-BaseVersion: 0.3.0
 branches:
   main:
     regex: ^master$|^main$
