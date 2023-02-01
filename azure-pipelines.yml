@@ -29,6 +29,11 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run build'
+
+- task: gitversion/execute@0
+  inputs:
+    useConfigFile: true
+    configFilePath: 'GitVersion.yml'
 - task: Npm@1
   inputs:
     command: 'publish'
