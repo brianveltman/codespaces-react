@@ -14,7 +14,7 @@ steps:
 - checkout: self
   fetchDepth: 0
   fetchTags: true
-  
+
 - script: dotnet tool install --global GitVersion.Tool
 
 - script: echo $(GitVersion.SemVer)
@@ -40,7 +40,9 @@ steps:
     useConfigFile: true
     configFilePath: 'GitVersion.yml'
 
-- script: echo 'version is:' $(FullSemVer)
+- script: |
+    echo 'Replacing version in package.json'
+    sed 's/0.0.0-placeholder/$(FullSemVer)/g' $(Build.SourcesDirectory)/package.json
 - task: Npm@1
   inputs:
     command: 'publish'
