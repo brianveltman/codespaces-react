@@ -2,8 +2,8 @@ mode: ContinuousDelivery
 branches:
   main:
     regex: ^master$|^main$
-    mode: ContinuousDelivery
-    tag: ''
+    mode: Mainline
+    tag: ""
     source-branches: []
     increment: Minor
     prevent-increment-of-merged-branch-version: true
